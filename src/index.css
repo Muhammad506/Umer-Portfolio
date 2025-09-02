@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #060618;
+  --secondary: #ce7bff;
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+.bg-secondary {
+  background-color: var(--secondary);
+}
+.text-secondary {
+  color: var(--secondary);
+}
+/* -----------------------------------
+   ✨ Custom TailwindCSS Additions
+-------------------------------------*/
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--secondary);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* Selection highlight */
+::selection {
+  background-color: var(--secondary);
+  color: #000;
+}
+
+/* Customize bullet color */
+.swiper-pagination-bullet {
+  background-color: #aaa !important; /* Inactive bullet color */
+  opacity: 0.7;
+}
+
+/* Customize active bullet color */
+.swiper-pagination-bullet-active {
+  background-color: #ce7bff !important; /* Active bullet color */
+  opacity: 1;
+}
