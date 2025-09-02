@@ -23,7 +23,7 @@ const SidebarProfileCard = () => {
       {/* Profile Image */}
       <img
         src="/Portfolio.jpg"
-        alt="Kashif Profile"
+        alt="Umer Profile"
         className="w-56 h-56 rounded-xl border border-gray-600 mx-auto object-cover"
       />
 
