@@ -11,7 +11,7 @@ const IntroSection = () => {
 
       <h1 className="text-3xl md:text-5xl mb-4 leading-14">
         <span className="text-5xl md:text-7xl">
-          Hi, I'm <span className="text-secondary">Umer</span> — <br />
+          Hi, I'm <span className="text-secondary">Umer</span> Saleem <br />
         </span>
         FrontEnd Web Developer
       </h1>

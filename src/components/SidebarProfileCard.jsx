@@ -12,30 +12,36 @@ const SidebarProfileCard = () => {
       ?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
   return (
-    <div className="w-full md:w-[320px] space-y-8 text-center border border-zinc-700 rounded-4xl p-6 relative">
+    <div
+      className="w-full md:w-[320px] space-y-8 text-center p-8 relative
+                   bg-white/5 backdrop-blur-md shadow-2xl border border-white/10
+                   rounded-4xl"
+    >
       {/* Top Bar with Logo */}
       <div className="flex justify-center items-center px-1">
-        <h1 className="text-white font-semibold text-[22px] flex items-center gap-1">
+        <h1 className="text-white font-semibold text-[20px] flex items-center gap-1">
           FrontEnd Web Developer
         </h1>
       </div>
-
       {/* Profile Image */}
       <img
         src="/Portfolio.jpg"
         alt="Umer Profile"
-        className="w-56 h-56 rounded-xl border border-gray-600 mx-auto object-cover"
+        className="w-48 h-48 rounded-3xl ring-1 ring-[#ce7bff]/50 p-0.5 mx-auto object-cover transition duration-300 hover:scale-[1.05]"
       />
-
       {/* Info */}
-      <div>
-        <h2 className="text-white text-3xl font-medium"> Umer Saleem</h2>
-        <p className="text-white text-sm"></p>
+      <div className="pt-2">
+        {" "}
+        <h2 className="text-white text-3xl font-bold"> Umer Saleem</h2>
+        <p className="text-secondary text-sm font-medium">
+          Available for Projects
+        </p>{" "}
       </div>
-      <p className="text-gray-500">© 2025 Umer. All Rights Reserved</p>
-
+      <p className="text-gray-400 text-xs">© 2025 Umer. All Rights Reserved</p>{" "}
       {/* Social Icons */}
-      <div className="flex justify-center gap-3 mt-8">
+      <div className="flex justify-center gap-4 mt-8">
+        {" "}
+        {/* Increased gap */}
         {[
           {
             link: "mailto:muhammadumersaleem408@gmail.com?subject=Let’s Work Together&body=Hi Umer,",
@@ -59,21 +65,19 @@ const SidebarProfileCard = () => {
             rel="noopener noreferrer"
             key={idx}
             title={label}
-            className="w-9 h-9 flex items-center justify-center border border-gray-500 rounded-full text-gray-300 hover:text-[#CE7BFF] hover:border-[#CE7BFF] transition"
+            className="w-10 h-10 flex items-center justify-center border border-white/20 rounded-full text-white/80 bg-white/5 backdrop-blur-sm hover:text-secondary hover:border-secondary hover:scale-110 transition duration-300"
           >
             {icon}
           </a>
         ))}
       </div>
-
-      {/* CTA Button */}
-      <div className="w-full flex items-center justify-between mt-6 gap-2 relative overflow-hidden">
-        {/* Talk Button */}
+      {/* CTA Button Group */}
+      <div className="w-full flex items-center justify-between mt-6 gap-3 relative overflow-hidden">
         <motion.button
           onClick={handleClick}
           animate={{ width: isHovered ? "48px" : "100%" }}
           transition={{ duration: 0.4, ease: "easeInOut" }}
-          className="h-10 bg-secondary text-white font-semibold rounded-full overflow-hidden flex items-center justify-center"
+          className="h-12 bg-secondary text-white font-bold text-sm rounded-full overflow-hidden flex items-center justify-center shadow-lg hover:shadow-xl"
         >
           <div className="w-full h-full flex items-center justify-center gap-2">
             <motion.div
@@ -104,7 +108,7 @@ const SidebarProfileCard = () => {
           onMouseLeave={() => setIsHovered(false)}
           animate={{ width: isHovered ? "100%" : "48px" }}
           transition={{ duration: 0.4, ease: "easeInOut" }}
-          className="h-10 min-w-10 bg-[#CE7BFF] text-white font-semibold px-2 rounded-full overflow-hidden relative flex items-center justify-center"
+          className="h-12 min-w-12 bg-white/10 text-white font-bold text-sm rounded-full overflow-hidden relative flex items-center justify-center border border-white/30 hover:bg-white/20 shadow-lg hover:shadow-xl"
         >
           <div className="w-full h-full flex items-center justify-center gap-2">
             <motion.div

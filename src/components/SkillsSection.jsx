@@ -54,7 +54,7 @@ const SkillsSection = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
         viewport={{ once: true }}
-        className="text-5xl mb-8 font-bold"
+        className="text-5xl mb-8 font-semibold"
       >
         My <span className="text-secondary">Skills</span>
       </motion.h2>
@@ -73,16 +73,18 @@ const SkillsSection = () => {
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.4, delay: i * 0.05 }}
             viewport={{ once: true }}
-            className="bg-[#1f1f1f] border border-zinc-700 rounded-xl p-6 shadow-lg hover:shadow-[#CE7BFF]/20 transition-all"
+            className="glass-effect rounded-xl p-6 shadow-lg hover:shadow-[#CE7BFF]/20 transition-all backdrop-blur-md border border-white/10 relative overflow-hidden group"
           >
-            <div className="flex justify-center mb-4">
+            <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+            <div className="flex justify-center mb-4 relative z-10">
               <img
                 src={skill.icon}
                 alt={skill.name}
                 className="w-14 h-14 object-contain"
               />
             </div>
-            <p className="text-center font-semibold text-gray-300 mb-2">
+            <p className="text-center font-semibold text-gray-300 mb-2 relative z-10">
               {skill.name}
             </p>
           </motion.div>

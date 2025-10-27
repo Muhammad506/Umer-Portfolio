@@ -10,25 +10,25 @@ import {
 const ServicesSection = () => {
   const services = [
     {
-      icon: <FaLaptopCode className="text-secondary text-xl" />,
+      icon: <FaLaptopCode className="text-secondary text-2xl" />,
       title: "Frontend Development",
       desc: "I build responsive, modern, and user-friendly web applications that perform smoothly across devices.",
       count: "Delivered 10+ frontend projects",
     },
     {
-      icon: <FaPencilRuler className="text-secondary text-xl" />,
+      icon: <FaPencilRuler className="text-secondary text-2xl" />,
       title: "UI/UX Implementation",
       desc: "Turning design ideas into clean, functional interfaces with attention to detail and usability.",
       count: "Worked with startups & businesses",
     },
     {
-      icon: <FaMobileAlt className="text-secondary text-xl" />,
+      icon: <FaMobileAlt className="text-secondary text-2xl" />,
       title: "Responsive Design",
       desc: "Ensuring websites look and work perfectly on desktops, tablets, and mobile screens.",
       count: "Optimized multiple live platforms",
     },
     {
-      icon: <FaRocket className="text-secondary text-xl" />,
+      icon: <FaRocket className="text-secondary text-2xl" />,
       title: "Performance Optimization",
       desc: "Improving load speed, accessibility, and SEO readiness for scalable, high-performance apps.",
       count: "Boosted performance scores for projects",
@@ -41,36 +41,49 @@ const ServicesSection = () => {
         <FaLayerGroup /> Services
       </h2>
 
-      <h2 className="text-5xl mb-6">
+      <h2 className="text-5xl mb-6 font-semibold">
         My <span className="text-secondary">Specializations</span>
       </h2>
-      <p className="text-gray-400 flex flex-col gap-2 max-w-2xl my-2">
+      <p className="text-gray-400 max-w-2xl text-lg mt-4 mb-8">
+        {" "}
         I specialize in crafting fast, scalable, and user-focused web solutions
-        for startups and growing businesses.
+        for startups and growing businesses. Here’s what I can help you with:
       </p>
-      <p className="text-gray-400 flex flex-col gap-2 max-w-2xl mb-4">
-        Here’s what I can help you with:
-      </p>
-      <div className="space-y-4">
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 max-w-4xl mx-auto">
         {services.map((srv, i) => (
           <div
             key={i}
-            className="group relative border border-zinc-700 hover:border-[#CE7BFF] rounded-lg p-4"
+            className="group relative p-6 rounded-xl h-full shadow-lg transition-all duration-300
+                       bg-white/5 backdrop-blur-sm border border-white/10
+                       hover:border-secondary/50 hover:shadow-xl hover:scale-[1.03] overflow-hidden"
           >
-            <div className="absolute top-5 right-5 group-hover:scale-200 group-hover:top-1/2 group-hover:right-10 group-hover:-translate-y-1/2 transition-all">
-              {srv.icon}
+            <div className="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-[0.03] blur-xl transition-opacity duration-500 z-0"></div>
+
+            <div className="relative z-10">
+              {" "}
+              <div className="flex items-start justify-between mb-3">
+                <h3 className="font-bold text-xl">{srv.title}</h3>{" "}
+                <div className="text-secondary p-3 rounded-full bg-white/10 backdrop-blur-sm">
+                  {React.cloneElement(srv.icon, {
+                    className: "text-secondary text-2xl",
+                  })}
+                </div>
+              </div>
+              <p className="text-gray-300 mb-3 text-base">{srv.desc}</p>{" "}
+              <div className="flex items-center gap-2 text-sm text-gray-400 pt-2 border-t border-white/10">
+                <span className="text-secondary font-semibold">
+                  {srv.count}
+                </span>
+              </div>
             </div>
-            <h3 className="font-semibold text-lg">{srv.title}</h3>
-            <p className="text-gray-400">{srv.desc}</p>
-            <span className="text-xs text-gray-500 group-hover:font-semibold">
-              {srv.count}
-            </span>
           </div>
         ))}
       </div>
-      <p className="text-gray-400 flex flex-col gap-2 max-w-2xl mt-4">
+
+      <p className="text-gray-400 max-w-2xl mt-12 text-lg mx-0 text-left">
         If you’re looking for a frontend developer who delivers clean,
-        responsive, and optimized solutions, let’s connect.
+        responsive, and optimized solutions, **let’s connect.**
       </p>
     </section>
   );

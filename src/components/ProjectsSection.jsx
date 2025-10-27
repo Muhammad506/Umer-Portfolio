@@ -45,7 +45,7 @@ const ProjectsSection = () => {
         <FaTh /> Projects
       </h2>
 
-      <h2 className="text-5xl font-bold mb-4">
+      <h2 className="text-5xl font-semibold mb-4">
         Featured <span className="text-secondary">Projects</span>
       </h2>
       <p className="text-gray-400 flex flex-col gap-2 max-w-2xl mb-12">
@@ -143,7 +143,7 @@ const ProjectsSection = () => {
               .getElementById("contact")
               ?.scrollIntoView({ behavior: "smooth" });
           }}
-          className="inline-block px-6 py-3 rounded-full bg-secondary text-white font-medium hover:bg-opacity-80 transition"
+          className="inline-block px-6 py-3 rounded-full cursor-pointer bg-secondary text-white font-medium hover:brightness-80 transition"
         >
           SHOW ME MORE
         </button>
