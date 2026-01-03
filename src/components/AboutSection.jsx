@@ -4,7 +4,7 @@ import { FaUser } from "react-icons/fa";
 const AboutSection = () => {
   return (
     <section className="py-20">
-      <h2 className="mb-16 text-sm flex gap-2 items-center border border-zinc-700 w-fit px-4 py-1 rounded-full">
+      <h2 className="mb-16 text-sm flex gap-2 items-center border border-zinc-700 w-fit px-4 py-1 rounded-full  shadow-[0_0_20px_#c264fa]">
         <FaUser /> About
       </h2>
 

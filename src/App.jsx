@@ -11,6 +11,7 @@ import SidebarProfileCard from "./components/SidebarProfileCard";
 import SidebarNav from "./components/SidebarNav";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Background from "./components/background";
 import { useEffect } from "react";
 
 export default function App() {
@@ -39,7 +40,8 @@ export default function App() {
   }, []);
 
   return (
-    <div className="bg-primary text-white font-sans w-full md:h-screen md:fixed overflow-hidden">
+    <div className="bg-primary text-white font-serif w-full md:h-screen md:fixed overflow-hidden">
+      <Background />
       <video
         autoPlay
         loop
@@ -62,8 +64,9 @@ export default function App() {
       {/* Right Sidebar - Vertical Navigation */}
       <aside
         data-aos="zoom-out"
-        className="hidden md:flex fixed top-1/2 right-4 -translate-y-1/2 z-20"
+        className="hidden md:flex fixed top-1/2 right-4 -translate-y-1/2 z-20 "
       >
+        
         <SidebarNav />
       </aside>
 

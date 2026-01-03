@@ -59,7 +59,7 @@ const SidebarNav = () => {
 
   return (
     <aside className="flex flex-col items-center justify-start p-4 space-y-6">
-      <div className="border border-gray-600 rounded-full p-3 flex flex-col items-center space-y-6 mt-4">
+      <div className="border border-gray-600 rounded-full p-3 flex flex-col items-center space-y-6 mt-4  shadow-[0_0_20px_#c264fa] ">
         {navItems.map((item) => (
           <button
             key={item.id}

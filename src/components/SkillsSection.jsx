@@ -44,7 +44,7 @@ const SkillsSection = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="mb-8 text-sm flex gap-2 items-center border border-zinc-700 w-fit px-4 py-1 rounded-full"
+        className="mb-8 text-sm flex gap-2 items-center  shadow-[0_0_20px_#c264fa]  border border-zinc-700 w-fit px-4 py-1 rounded-full"
       >
         <FaPencilRuler /> Skills
       </motion.h2>
