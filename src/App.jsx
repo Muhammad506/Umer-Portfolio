@@ -26,7 +26,6 @@ export default function App() {
       throttleDelay: 99,
     });
 
-    // Trigger AOS to recalculate positions when container scrolls
     const container = document.getElementById("scroll-container");
     if (container) {
       container.addEventListener("scroll", AOS.refresh);
@@ -40,20 +39,23 @@ export default function App() {
   }, []);
 
   return (
-    <div className="bg-primary text-white font-serif w-full md:h-screen md:fixed overflow-hidden">
+    <div className=" text-white font-serif w-full md:h-screen overflow-hidden relative">
+
+      {/* ✅ Physics / Three.js Background */}
       <Background />
+
+      {/* Video Background */}
       <video
         autoPlay
         loop
         muted
         playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover z-0 opacity-20"
+        className="absolute top-0 left-0 w-full h-full object-cover z-10 opacity-20"
       >
-        {/* <source src="/background.mp4" type="video/mp4" /> */}
         <source src="/new-bg.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
       </video>
-      {/* Left Sidebar - Profile Card */}
+
+      {/* Left Sidebar */}
       <aside
         data-aos="zoom-out"
         className="w-full md:fixed flex items-center md:top-1/2 md:-translate-y-1/2 md:left-0 md:w-[350px] p-4 z-20"
@@ -61,19 +63,18 @@ export default function App() {
         <SidebarProfileCard />
       </aside>
 
-      {/* Right Sidebar - Vertical Navigation */}
+      {/* Right Sidebar */}
       <aside
         data-aos="zoom-out"
-        className="hidden md:flex fixed top-1/2 right-4 -translate-y-1/2 z-20 "
+        className="hidden md:flex fixed top-1/2 right-4 -translate-y-1/2 z-20"
       >
-        
         <SidebarNav />
       </aside>
 
-      {/* Main Scrollable Content Area */}
+      {/* Main Scrollable Content */}
       <main
         id="scroll-container"
-        className="z-20 relative md:w-[50%] md:ml-[30%]  md:h-screen overflow-y-scroll hide-scrollbar scroll-smooth px-4 py-12"
+        className="z-20 relative md:w-[50%] md:ml-[30%] md:h-screen overflow-y-scroll hide-scrollbar scroll-smooth px-4 py-12"
       >
         <section data-aos="fade-up" id="home">
           <IntroSection />

@@ -45,7 +45,7 @@ const ServicesSection = () => {
         <FaLayerGroup /> Services
       </h2>
 
-      <h2 className="text-5xl mb-6 font-semibold">
+      <h2 className="md:text-5xl text-4xl mb-6 font-semibold">
         My <span className="text-secondary">Specializations</span>
       </h2>
 

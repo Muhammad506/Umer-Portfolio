@@ -44,7 +44,7 @@ const IntroSection = () => {
             />
             +
           </span>
-          <p className="text-3xl text-gray-400">Year of Experience</p>
+          <p className="text-2xl md:text-3xl text-gray-400">Year of Experience</p>
         </div>
         <div>
           <span className="text-secondary text-6xl flex items-center">
@@ -58,7 +58,7 @@ const IntroSection = () => {
             />
             +
           </span>
-          <p className="text-3xl text-gray-400">Projects Completed</p>
+          <p className=" text-2xl md:text-3xl text-gray-400">Projects Completed</p>
         </div>
       </div>
     </section>
