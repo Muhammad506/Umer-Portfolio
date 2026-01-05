@@ -39,10 +39,10 @@ export default function App() {
   }, []);
 
   return (
-    <div className=" text-white font-serif w-full md:h-screen overflow-hidden relative">
+    <div className=" bg-primary text-white font-serif w-full md:h-screen overflow-hidden relative">
 
       {/* ✅ Physics / Three.js Background */}
-      <Background />
+      {/* <Background /> */}
 
       {/* Video Background */}
       <video
