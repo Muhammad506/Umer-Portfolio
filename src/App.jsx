@@ -5,13 +5,11 @@ import ServicesSection from "./components/ServicesSection";
 import SkillsSection from "./components/SkillsSection";
 import ProjectsSection from "./components/ProjectsSection";
 import TestimonialsSection from "./components/TestimonialsSection";
-import PricingSection from "./components/PricingSection";
 import ContactSection from "./components/ContactSection";
 import SidebarProfileCard from "./components/SidebarProfileCard";
 import SidebarNav from "./components/SidebarNav";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Background from "./components/background";
 import { useEffect } from "react";
 
 export default function App() {
@@ -40,10 +38,6 @@ export default function App() {
 
   return (
     <div className=" bg-primary text-white font-serif w-full md:h-screen overflow-hidden relative">
-
-      {/* ✅ Physics / Three.js Background */}
-      {/* <Background /> */}
-
       {/* Video Background */}
       <video
         autoPlay
@@ -97,9 +91,7 @@ export default function App() {
         <section data-aos="fade-up" id="testimonials">
           <TestimonialsSection />
         </section>
-        <section data-aos="fade-up" id="pricing">
-          <PricingSection />
-        </section>
+
         <section data-aos="fade-up" id="contact">
           <ContactSection />
         </section>
